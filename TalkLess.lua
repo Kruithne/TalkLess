@@ -41,6 +41,8 @@ local function HACK_TalkingHeadFrame_PlayCurrent()
 
 	if TalkLessData[vo] then
 		-- We've already heard this line before.
+		local info = ChatTypeInfo["MONSTER_SAY"];
+		DEFAULT_CHAT_FRAME:AddMessage(string.format(CHAT_MONSTER_SAY_GET, name) .. text, info.r, info.g, info.b);
 		return;
 	else
 		-- New line, flag it as heard.
