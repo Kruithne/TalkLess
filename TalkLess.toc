@@ -2,7 +2,7 @@
 ## Title: TalkLess
 ## Notes: Mute talking heads after they play once.
 ## Author: Kruithne
-## Version: 1.0.0
+## Version: 1.0.1
 ## SavedVariables: TalkLessData
 
 ## X-Curse-Project-ID: talk-less
