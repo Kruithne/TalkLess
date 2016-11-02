@@ -2,10 +2,11 @@
 ## Title: TalkLess
 ## Notes: Mute talking heads after they play once.
 ## Author: Kruithne
-## Version: 1.0.1
+## Version: 1.0.2
 ## SavedVariables: TalkLessData
 
 ## X-Curse-Project-ID: talk-less
+## X-GitHub-Repo: Kruithne/TalkLess
 ## X-License: All Rights Reserved. Modifications welcome on GitHub: https://github.com/Kruithne/TalkLess
 
 TalkLess.lua
