@@ -1,3 +1,6 @@
+** Version 1.0.3 **
+* Fixed issue with PlaySoundKitID being removed in 7.3.0.
+
 ** Version 1.0.2 **
 * Duplicate text will no longer be printed to the chat log.
 
