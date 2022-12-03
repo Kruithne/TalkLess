@@ -1,8 +1,8 @@
-## Interface: 90005
+## Interface: 100002
 ## Title: TalkLess
 ## Notes: Mute talking heads after they play once.
 ## Author: Kruithne
-## Version: 1.0.5
+## Version: 1.0.6
 ## SavedVariables: TalkLessData
 
 ## X-Curse-Project-ID: talk-less
