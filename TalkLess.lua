@@ -22,7 +22,7 @@ local eventFrame = CreateFrame("FRAME");
 	Lua does match strings fast, the amount of strings we will end up storing after some use in the wild will amount
 	to something silly.
 ]]--
-local function HACK_TalkingHeadFrame_PlayCurrent()
+local function TalkLess_Override()
 	local self = TalkingHeadFrame
 	self.isPlaying = true;
 
@@ -40,6 +40,7 @@ local function HACK_TalkingHeadFrame_PlayCurrent()
 	local currentDisplayInfo = model:GetDisplayInfo();
 	local displayInfo, cameraID, vo, duration, lineNumber, numLines, name, text, isNewTalkingHead, textureKit = C_TalkingHead.GetCurrentLineInfo();
 
+	-- TalkLess change begin
 	if TalkLessData[vo] then
 		-- We've already heard this line before.
 		return;
@@ -47,6 +48,7 @@ local function HACK_TalkingHeadFrame_PlayCurrent()
 		-- New line, flag it as heard.
 		TalkLessData[vo] = true;
 	end
+	-- TalkLess change end
 
 	local textFormatted = string.format(text);
 	if ( displayInfo and displayInfo ~= 0 ) then
@@ -120,7 +122,7 @@ local function OnLoad()
 		TalkLessData = {};
 	end
 
-	TalkingHeadFrame_PlayCurrent = HACK_TalkingHeadFrame_PlayCurrent;
+	TalkingHeadFrame.PlayCurrent = TalkLess_Override;
 
 	eventFrame:SetScript("OnEvent", nil);
 	eventFrame:UnregisterEvent("ADDON_LOADED");
