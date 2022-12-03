@@ -10,8 +10,9 @@
 local eventFrame = CreateFrame("FRAME");
 
 --[[
-	Interface/AddOns/Blizzard_TalkingHeadUI/Blizzard_TalkingHeadUI.lua
-	WOW-21996patch7.0.3_Beta
+	Function sourced from:
+	Interface/FrameXML/TalkingHeadUI.lua
+	Version 10.0.0 (46313)
 
 	Q: Why are we implementing like this, rather than just hooking?
 	A: Rather than giving this function parameters, Blizzard make a call to C_TalkingHead.GetCurrentLineInfo inside
