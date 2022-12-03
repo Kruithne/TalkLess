@@ -132,16 +132,9 @@ local function OnEvent(self, event, ...)
 	if event == "ADDON_LOADED" then
 		local addonName = ...;
 		local ADDON_NAME = "TalkLess";
-		local BLIZZ_ADDON_NAME = "Blizzard_TalkingHeadUI";
 
 		if addonName == ADDON_NAME then
-			if IsAddOnLoaded(BLIZZ_ADDON_NAME) then
-				OnLoad();
-			end
-		elseif addonName == BLIZZ_ADDON_NAME then
-			if IsAddOnLoaded(ADDON_NAME) then
-				OnLoad();
-			end
+			OnLoad();
 		end
 	end
 end
