@@ -40,8 +40,7 @@ local talkingHeadFontColor = {
 	["Normal"] = {Name = CreateColor(1, 0.82, 0.02), Text = CreateColor(1, 1, 1), Shadow = CreateColor(0.0, 0.0, 0.0, 1.0)},
 }
 
-local function TalkLess_Override()
-	local self = TalkingHeadFrame
+local function TalkLess_Override(self)
 	self.isPlaying = true;
 
 	local model = self.MainFrame.Model;
