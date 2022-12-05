@@ -23,6 +23,23 @@ local eventFrame = CreateFrame("FRAME");
 	Lua does match strings fast, the amount of strings we will end up storing after some use in the wild will amount
 	to something silly.
 ]]--
+
+-- Need to steal these as well due to scoping
+local talkingHeadTextureKitRegionFormatStrings = {
+	["TextBackground"] = "%s-TextBackground",
+	["Portrait"] = "%s-PortraitFrame",
+}
+local talkingHeadDefaultAtlases = {
+	["TextBackground"] = "TalkingHeads-TextBackground",
+	["Portrait"] = "TalkingHeads-Alliance-PortraitFrame",
+}
+local talkingHeadFontColor = {
+	["TalkingHeads-Horde"] = {Name = CreateColor(0.28, 0.02, 0.02), Text = CreateColor(0.0, 0.0, 0.0), Shadow = CreateColor(0.0, 0.0, 0.0, 0.0)},
+	["TalkingHeads-Alliance"] = {Name = CreateColor(0.02, 0.17, 0.33), Text = CreateColor(0.0, 0.0, 0.0), Shadow = CreateColor(0.0, 0.0, 0.0, 0.0)},
+	["TalkingHeads-Neutral"] = {Name = CreateColor(0.33, 0.16, 0.02), Text = CreateColor(0.0, 0.0, 0.0), Shadow = CreateColor(0.0, 0.0, 0.0, 0.0)},
+	["Normal"] = {Name = CreateColor(1, 0.82, 0.02), Text = CreateColor(1, 1, 1), Shadow = CreateColor(0.0, 0.0, 0.0, 1.0)},
+}
+
 local function TalkLess_Override()
 	local self = TalkingHeadFrame
 	self.isPlaying = true;
