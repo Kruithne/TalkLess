@@ -1,3 +1,9 @@
+** Version 1.0.6 **
+* Adapt to new mixin-style TalkingHeadFrame in Dragonflight 10.0
+
+** Version 1.0.5 **
+* Updated interface version for Shadowlands 9.0
+
 ** Version 1.0.4 **
 * Updated interface version for Battle for Azeroth 8.0
 
